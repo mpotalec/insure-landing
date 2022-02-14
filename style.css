@@ -119,7 +119,6 @@ button{
 
 @media (max-width> 50em){
     header{
-        padding: 0; /*PITANJE 2????????*/
+        padding: 0; 
     }
-}
-    
+}   
