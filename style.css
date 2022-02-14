@@ -1,0 +1,125 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 62.5%; /*Veličina fonta jednka 10px*/
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Display', serif;
+}
+
+.u-visuallyHidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/*header{
+    background-color: #ffffff;
+    padding: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;      /da sve bude poravnano(logo je bio iznad)/
+}
+
+.Main-Navigation{
+    justify-self: end;
+}
+                                        GRID!!!
+.Main-Navigation ul{
+    display: none;
+}
+
+button{
+    font: inherit;
+    border: 0;
+    background-color: transparent;
+    padding: 1rem;
+}*/
+
+header{
+    padding: 1rem 5rem;
+}
+
+header .contain{
+    display: flex;
+    justify-content: space-between; /*distribucija kontenta*/
+    align-items: center; /*centrira da sve bude u sredini*/
+}
+
+.contain{
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+.Main-Navigation ul{
+    display: none;
+    list-style-type: none; /*nema tockica kod ul*/
+    align-items: center;        
+}
+
+.Main-Navigation ul a{
+    display: block;
+    padding: 1rem;/*ovdje rem zato da link bude veci*/
+    color: #837D88;
+    text-decoration: none;/*da ne bude podcrtano*/
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.Main-Navigation ul a:hover,
+.Main-Navigation ul a:focus{
+    color:#2C2830;
+}
+
+.Main-Navigation ul a:hover:focus-visible{/*focus-visible da kada kliknemo misem nema, a sa tipkovnicom se vidi rub*/
+    outline: 1px solid #2C2830;
+}
+
+.Main-Navigation .plans{
+    text-transform: uppercase;
+    color:#2C2830;
+    background-color: white;
+    outline: 1px solid #2C2830;/*PITANJE 1???????*/
+    transition: color 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.Main-Navigation .plans:hover,
+.Main-Navigation .plans:focus{
+    color: white;
+    background-color: #2C2830;
+    outline: 1px solid white;
+}
+
+
+button{
+    font: inherit;
+    border: 0;
+    background-color: transparent;
+    padding: 1rem;
+}
+
+@media (min-width: 50em){
+    button{
+        display: none;
+    }
+    .Main-Navigation ul{
+        display: flex;
+    }
+}
+
+@media (max-width> 50em){
+    header{
+        padding: 0; /*PITANJE 2????????*/
+    }
+}
+    
